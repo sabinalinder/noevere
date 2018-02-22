@@ -1,0 +1,13 @@
+@mixin transition( $e ) {
+    -webkit-transition: $e;
+       -moz-transition: $e;
+         -o-transition: $e;
+            transition: $e
+}
+
+@mixin translateY( $e ) {
+    -webkit-translateY: $e;
+       -moz-translateY: $e;
+         -o-translateY: $e;
+            translateY: $e;
+}

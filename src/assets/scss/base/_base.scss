@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding-top: $site-header-height;
+    font-size: 16px;
+    color: $black;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    @include transition( all .4s ease-in-out );
+
+    &:hover {
+        color: $red;
+        @include transition( all .4s ease-in-out );
+    }
+}
