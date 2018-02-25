@@ -5,81 +5,68 @@
     display: block;
     width: 100%;
     height: $site-header-height;
-    background: $black;
-    color: $white;
+    background: $brand-color;
+    font-family: $font-heading;
+    font-weight: $font-normal;
+    color: $black;
 
     &__inner {
-
+        display: flex;
     }
 
     &__logo,
     &__menu,
     &__social {
-        display: inline-block;
-        float: left;
+        text-align: center;
     }
 
     &__logo {
+        flex-basis: 20%;
+        line-height: $site-header-height;
+        padding: 0 10px;
 
         .site-logo {
+            display: block;
+            height: $site-header-height;
 
+            img {
+                height: calc( #{$site-header-height} - 20px);
+                margin: 10px 0;
+            }
         }
     }
 
     &__menu {
+        flex-basis: 60%;
+        font-size: 1.4em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
 
         .primary-menu {
+
+
             .menu {
                 &__item {
+                    a {
+                        color: $color-text--light;
 
+                        &:hover {
+                            color: $accent-color;
+                        }
+                    }
                 }
             }
         }
     }
 
     &__social {
+        flex-basis: 20%;
+        text-align: center;
 
-    }
-}
-
-
-header {
-
-
-    .logo {
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        @include translateY( -50% );
-    }
-
-    nav,
-    nav ul,
-    nav ul li {
-        margin: 0;
-        padding: 0;
-    }
-
-    nav {
-        position: absolute;
-        top: 50%;
-        right: 15px;
-        @include translateY( -50% );
-
-        ul li {
-            display: inline-block;
-            margin-right: 20px;
-            list-style-type: none;
-
-            &.last {
-                margin: 0;
-            }
-
-            a {
-                font-size: 19px;
-                line-height: normal;
-                color: $white;
-            }
+        .social {
+            line-height: $site-header-height;
         }
     }
 }

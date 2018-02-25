@@ -1,0 +1,43 @@
+$social-icon-height: 35px;
+
+.social {
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        display: inline-block;
+        width: $social-icon-height;
+        height: $social-icon-height;
+        margin-right: 10px;
+        background: white;
+        text-align: center;
+        line-height: $social-icon-height;
+        border-radius: 5px;
+        @include transition( all .2s ease-in-out );
+
+        &:last-of-type {
+            margin: 0;
+        }
+
+        &:hover {
+            background: lightblue;
+            cursor: pointer;
+        }
+
+        a {
+            color: $black;
+        }
+
+        &--facebook {
+
+        }
+
+        &--instagram {
+
+        }
+
+        &--linkedin {
+
+        }
+    }
+}

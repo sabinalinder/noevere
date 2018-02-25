@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+// TODO: import this from assets/img
+import logo from './logo.png';
 
 class Header extends Component {
     render() {
@@ -7,7 +9,9 @@ class Header extends Component {
             <header className="site-header" role="banner">
                 <div className="site-header__inner">
                     <div className="site-header__logo">
-                        <Link to="/" className="site-logo">Logo</Link>
+                        <Link to="/" className="site-logo">
+                            <img src={logo} alt="logo" />
+                        </Link>
                     </div>
 
                     <div className="site-header__menu">
