@@ -6,15 +6,15 @@ import logo from './logo.png';
 class Header extends Component {
     render() {
         return (
-            <header className="site-header" role="banner">
-                <div className="site-header__inner">
-                    <div className="site-header__logo">
+            <header role="banner">
+                <div id="top-header" class="top-header">
+                    <div className="top-header__logo">
                         <Link to="/" className="site-logo">
                             <img src={logo} alt="logo" />
                         </Link>
                     </div>
 
-                    <div className="site-header__menu">
+                    <div className="top-header__menu">
                         <nav className="primary-menu">
                             <ul className="menu">
                                 <li className="menu__item">
@@ -30,7 +30,7 @@ class Header extends Component {
                         </nav>
                     </div>
 
-                    <div className="site-header__social">
+                    <div className="top-header__social">
                         <ul className="social">
                             <li className="social__item social__item--facebook">
                                 <Link to="#">F</Link>
@@ -50,6 +50,18 @@ class Header extends Component {
                         <span className="toggle-menu__line"></span>
                     </Link>
 
+                </div>
+                <div className="home-slide">
+                    {/* <div className="container container--wide"> */}
+                        <div className="wrapper">
+                            <div className="column-6">
+dsfafds
+                            </div>
+                            <div className="column-6">
+                                sdfsdfa
+                            </div>
+                        </div>
+                    {/* </div> */}
                 </div>
             </header>
         )

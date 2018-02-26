@@ -1,4 +1,4 @@
-.site-header {
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,63 +10,63 @@
     font-weight: $font-normal;
     color: $black;
 
-    &__inner {
+    .top-header {
         display: flex;
-    }
 
-    &__logo,
-    &__menu,
-    &__social {
-        text-align: center;
-    }
+        &__logo,
+        &__menu,
+        &__social {
+            text-align: center;
+        }
 
-    &__logo {
-        flex-basis: 20%;
-        line-height: $site-header-height;
-        padding: 0 10px;
+        &__logo {
+            flex-basis: 20%;
+            line-height: $site-header-height;
+            padding: 0 10px;
 
-        .site-logo {
-            display: block;
-            height: $site-header-height;
+            .site-logo {
+                display: block;
+                height: $site-header-height;
 
-            img {
-                height: calc( #{$site-header-height} - 20px);
-                margin: 10px 0;
+                img {
+                    height: calc( #{$site-header-height} - 20px);
+                    margin: 10px 0;
+                }
             }
         }
-    }
 
-    &__menu {
-        flex-basis: 60%;
-        font-size: 1.4em;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
+        &__menu {
+            flex-basis: 60%;
+            font-size: 1.4em;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
 
-        .primary-menu {
+            .primary-menu {
 
 
-            .menu {
-                &__item {
-                    a {
-                        color: $color-text--light;
+                .menu {
+                    &__item {
+                        a {
+                            color: $color-text--light;
 
-                        &:hover {
-                            color: $accent-color;
+                            &:hover {
+                                color: $accent-color;
+                            }
                         }
                     }
                 }
             }
         }
-    }
 
-    &__social {
-        flex-basis: 20%;
-        text-align: center;
+        &__social {
+            flex-basis: 20%;
+            text-align: center;
 
-        .social {
-            line-height: $site-header-height;
+            .social {
+                line-height: $site-header-height;
+            }
         }
     }
 }
