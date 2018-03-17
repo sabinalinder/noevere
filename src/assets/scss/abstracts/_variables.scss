@@ -1,33 +1,34 @@
 /**
 * Brand colors
 */
-$mercury: #E6E6E6;
-// $elm:     #168089;
-$eden: #114D4D;
-$tango:   #FF7200;
-$geraldine: #f9d8d6;
+$mercury:        #E6E6E6;
+$eden:           #114D4D;
+$tango:          #FF7200;
+$rose-of-sharon: #c45500;
+$geraldine:      #f9d8d6;
 
 
-$black: #010000;
-$white: #fff;
+$black:     #010000;
+$white:     #fff;
 $lightGrey: #e6e6e6;
-$darkGrey: #333;
-$red: #ff1755;
+$darkGrey:  #333;
+$red:       #ff1755;
 
 /**
 * Functional colors
 */
-$base-color: $mercury;
-$brand-color: $eden;
-$brand-color--80: rgba($brand-color, 0.8);
-$accent-color: $tango;
-$accent-color--light: $geraldine;
-$color-text--dark: black;
-$color-text--light: white;
-$color-text-heading: black;
-$color-text-link: black;
+$base-color:                 $mercury;
+$brand-color:                $eden;
+$brand-color--80:            rgba($brand-color, 0.8);
+$accent-color:               $tango;
+$accent-color--light:        $geraldine;
+$accent-color--dark:         $rose-of-sharon;
+$color-text--dark:         black;
+$color-text--light:        white;
+$color-text-heading:       black;
+$color-text-link:          black;
 $color-text-link--visited: black;
-$color-text-link--hover: black;
+$color-text-link--hover:   black;
 
 /**
 * Sizes

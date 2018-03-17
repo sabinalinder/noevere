@@ -26,11 +26,6 @@ class Header extends Component {
                             <img src={logo} alt="logo" />
                         </Link>
                     </div>
-
-                    <button onClick={this.toggleMenuButton} id="toggle-menu" className="toggle-menu toggle-menu--site js-toggle-menu">
-
-                    </button>
-
                     <nav id="primary-menu">
                         <ul>
                             <li><Link to="/">Home</Link></li>
@@ -38,6 +33,7 @@ class Header extends Component {
                         </ul>
                     </nav>
 
+                    <button onClick={this.toggleMenuButton} id="toggle-menu" className="toggle-menu toggle-menu--site js-toggle-menu"></button>
                 </div>
                 <div className="hero" ref="nav">
                     <div className="container container--wide">
