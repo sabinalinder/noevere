@@ -1,0 +1,40 @@
+.toggle-menu {
+    position: fixed;
+    right: 1em;
+    width: 65px;
+    height: $site-header-height;
+
+    &__line {
+        position: absolute;
+        top: 50%;
+        height: 20px;
+
+        &:nth-child(1) {
+            top: 10px;
+        }
+
+        &:nth-child(2) {
+            top: 25px;
+        }
+
+        &:nth-child(3) {
+            top: 40px;
+        }
+
+        .line-top,
+        .line-bottom {
+            position: absolute;
+            background: radial-gradient(ellipse, transparent, transparent 7px, $accent-color 7px, $accent-color 10px, transparent 11px);
+            background-size: 36px 40px;
+            width: 65px;
+            height: 20px;
+        }
+
+        .line-bottom {
+            top: 20px;
+            left: 18px;
+            width: 43px;
+            background-position: 0px -20px;
+        }
+    }
+}

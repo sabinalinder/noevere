@@ -1,22 +1,145 @@
+html,
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
-    padding-top: $site-header-height;
-    background: $base-color;
-    font-size: 16px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $base-color;
     font-family: $font-body;
     color: $black;
     font-weight: 400;
     font-style: normal;
+
+    @include transition( all .5s ease-in 0s );
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+article,
+aside {
+    flex-basis: 100%;
+}
+
+@media screen and ( min-width: 800px ) {
+    aside {
+        flex: 2.5;
+    }
+
+    article {
+        flex: 7.5;
+    }
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
     font-family: $font-heading;
     font-weight: $font-normal;
+}
+
+h1 {
+    @include font-size( 3.2 );
+    line-height: 1.25rem;
+
+    @include for-size( tablet-landscape-up ) {
+        @include font-size( 4 );
+        line-height: 1.125rem;
+    }
+
+    @include for-size( desktop-up ) {
+        @include font-size( 4.8 );
+        line-height: 1.05rem;
+    }
+
+    @media print {
+        font-size: 36pt;
+        line-height: 1.25rem;
+    }
+}
+
+h2 {
+    @include font-size( 2.6 );
+    line-height: 1.15rem;
+
+    @include for-size( tablet-landscape-up ) {
+        @include font-size( 3.2 );
+        line-height: 1.25rem;
+    }
+
+    @include for-size( desktop-up ) {
+        @include font-size( .36 );
+    }
+
+    @media print {
+        font-size: 24pt;
+        line-height: 1.25rem;
+    }
+}
+
+h3 {
+    @include font-size( 2.2 );
+    line-height: 1.24rem;
+
+    @include for-size( tablet-landscape-up ) {
+        @include font-size( 2.4 );
+        line-height: 1.25rem;
+    }
+
+    @include for-size( desktop-up ) {
+        @include font-size( 2.8 );
+    }
+
+    @media print {
+        font-size: 18pt;
+        line-height: 1.25rem;
+    }
+}
+
+h4 {
+    @include font-size( 1.8 );
+    line-height: 1.11rem;
+
+    @include for-size( tablet-landscape-up ) {
+        @include font-size( 2.4 );
+        line-height: 1.22rem;
+    }
+
+    @media print {
+        font-size: 14pt;
+        line-height: 1.25rem;
+    }
+}
+
+blockquote {
+    @include font-size( 2 );
+    line-height: 1.25rem;
+
+    @include for-size( tablet-landscape-up ) {
+        @include font-size( 2.4 );
+        line-height: 1.46rem;
+    }
+
+    @media print {
+        font-size: 24pt;
+        line-height: 1.46rem;
+    }
+}
+
+a,
+p,
+span {
+    @include font-size( 1.6 );
 }
 
 a {

@@ -11,3 +11,23 @@
          -o-translateY: $e;
             translateY: $e;
 }
+
+// Calculate font size based of root font size
+@mixin font-size( $sizeValue: 1.6 ) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin for-size($size) {
+    @if $size == phone {
+        @media (max-width: 599px) { @content; }
+    } @else if $size == tablet-portrait-up {
+        @media (min-width: 600px) { @content; }
+    } @else if $size == tablet-landscape-up {
+        @media (min-width: 900px) { @content; }
+    } @else if $size == desktop-up {
+        @media (min-width: 1200px) { @content; }
+    } @else if $size == big-desktop-up {
+        @media (min-width: 1800px) { @content; }
+    }
+}

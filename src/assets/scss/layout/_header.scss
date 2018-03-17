@@ -1,10 +1,6 @@
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
     display: block;
     width: 100%;
-    height: $site-header-height;
     background: $brand-color;
     font-family: $font-heading;
     font-weight: $font-normal;
@@ -12,6 +8,7 @@ header {
 
     .top-header {
         display: flex;
+        height: $site-header-height;
 
         &__logo,
         &__menu,
@@ -35,37 +32,21 @@ header {
             }
         }
 
-        &__menu {
-            flex-basis: 60%;
-            font-size: 1.4em;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-
-            .primary-menu {
-
-
-                .menu {
-                    &__item {
-                        a {
-                            color: $color-text--light;
-
-                            &:hover {
-                                color: $accent-color;
-                            }
-                        }
-                    }
-                }
-            }
+        #primary-menu {
+            display: none;
         }
+    }
 
-        &__social {
-            flex-basis: 20%;
-            text-align: center;
+    .hero {
+        min-height: 940px;
+        padding-top: 14rem;
 
-            .social {
-                line-height: $site-header-height;
+        .headline h1 span {
+            font-size: inherit;
+            opacity: 0;
+
+            &.is-visible {
+                opacity: 1;
             }
         }
     }
