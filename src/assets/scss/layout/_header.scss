@@ -39,21 +39,26 @@ header {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: $accent-color--dark;
-            text-align: center;
+            padding-top: $site-header-height;
+            padding-left: 20%;
+            background-color: $white;
+            text-align: left;
 
             ul {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                padding: 0;
                 margin: 0;
+                padding: 0;
 
                 li {
                     list-style: none;
 
                     a {
-                        color: $black;
+                        @include font-size(4);
+                        @include line-height(6);
+                        color: $accent-color;
+
+                        &:hover {
+                            color: $brand-color;
+                        }
                     }
                 }
             }
