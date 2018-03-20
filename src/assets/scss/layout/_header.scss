@@ -7,9 +7,11 @@ header {
     color: $black;
 
     .top-header {
-        position: relative;
+        position: fixed;
         display: flex;
         height: $site-header-height;
+        width: 100%;
+        background: $brand-color--80;
 
         &__logo,
         &__menu,
@@ -34,19 +36,24 @@ header {
         }
 
         #primary-menu {
-            display: none;
+            // display: none;
             position: fixed;
             top: 0;
-            left: 0;
-            width: 100%;
+            right: -40%;
+            width: 40%;
             height: 100%;
             padding-top: $site-header-height;
-            padding-left: 20%;
             background-color: $white;
             text-align: left;
+            animation: slideIn .5s ease-in-out both;
+            -webkit-transition: width .7s ease-in-out, right .7s ease-in-out;
+               -moz-transition: width .7s ease-in-out, right .7s ease-in-out;
+                 -o-transition: width .7s ease-in-out, right .7s ease-in-out;
+                    transition: width .7s ease-in-out, right .7s ease-in-out;
 
             ul {
                 margin: 0;
+                margin-left: 20%;
                 padding: 0;
 
                 li {
@@ -67,10 +74,9 @@ header {
 
         .toggle-menu-wrapper,
         .hamburger {
-            position: absolute;
+            position: fixed;
             right: 1rem;
             width: 30px;
-            z-index: 999;
 
             &:hover {
                 cursor: pointer;
@@ -81,13 +87,29 @@ header {
             top: 0;
             width: 30px;
             height: 100%;
+            z-index: 999;
         }
 
         #toggle-menu {
             opacity: 0;
 
-            &:checked ~ #primary-menu {
-                display: block;
+            &:checked {
+                ~ #primary-menu {
+                    right: 0;
+                    width: 40%;
+                }
+
+                ~ .hamburger {
+                    transform: rotate(45deg);
+                    &:after {
+                        transform: rotate(90deg);
+                        bottom: 0;
+                    }
+                    &:before {
+                        transform: rotate(90deg);
+                        top: 0;
+                    }
+                }
             }
         }
 
@@ -99,6 +121,7 @@ header {
             background: $color-text--dark;
             transform-origin: center;
             transition: .5s ease-in-out;
+            z-index: 888;
 
             &:before,
             &:after {
