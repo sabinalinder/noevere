@@ -2,20 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // TODO: import this from assets/img
 import logo from './logo.png';
-import { toggleMenuButton } from './toggleMenuButton';
 
 class Header extends Component {
-
-    // constructor() {
-    //     super();
-    // }
-
-    /**
-    * Toggle the primary menu by clicking the toggle button
-    */
-    toggleMenuButton() {
-        toggleMenuButton();
-    }
 
     render() {
         return (
@@ -26,6 +14,12 @@ class Header extends Component {
                             <img src={logo} alt="logo" />
                         </Link>
                     </div>
+                    
+
+                    <label className="toggle-menu-wrapper" for="toggle-menu"></label>
+                    <input type="checkbox" id="toggle-menu" name="toggle-menu" />
+                    <span className="hamburger"></span>
+                    
                     <nav id="primary-menu">
                         <ul>
                             <li><Link to="/">Home</Link></li>
@@ -33,7 +27,6 @@ class Header extends Component {
                         </ul>
                     </nav>
 
-                    <button onClick={this.toggleMenuButton} id="toggle-menu" className="toggle-menu toggle-menu--site js-toggle-menu"></button>
                 </div>
                 <div className="hero" ref="nav">
                     <div className="container container--wide">
